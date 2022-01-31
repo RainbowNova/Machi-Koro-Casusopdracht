@@ -116,8 +116,13 @@ namespace Verbeterde_Machi_Koro
 
         private void buttonInstellingen_Click(object sender, EventArgs e)
         {
-            FormInstellingenScherm instellingenForm = new FormInstellingenScherm(Spel);
-            instellingenForm.Show();
+            MessageBox.Show("De instellingen zijn nog niet geïmplementeerd. Onze excuses voor het ongemak.");
+            
+            if (false)
+            {
+                FormInstellingenScherm instellingenForm = new FormInstellingenScherm(Spel);
+                instellingenForm.Show();
+            }
         }
     }
 }

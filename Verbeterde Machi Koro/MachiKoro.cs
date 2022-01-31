@@ -8,9 +8,9 @@ namespace Verbeterde_Machi_Koro
 {
     class MachiKoro
     {
-        public List<Speler> Spelers { get; set; }
-        public Speler ActieveSpeler { get; set; }
-        public List<KaartBase> Kaarten { get; set; }
+        public List<Speler> Spelers { get; private set; }
+        public Speler ActieveSpeler { get; private set; }
+        public List<KaartBase> Kaarten { get; private set; }
         public Speler Winnaar { get; private set; }
 
         public MachiKoro()
@@ -23,7 +23,7 @@ namespace Verbeterde_Machi_Koro
         /// Genereert alle koopbare kaarten. - Keano
         /// </summary>
         /// <returns></returns>
-        public List<KaartBase> GenereerKaarten()
+        private List<KaartBase> GenereerKaarten()
         {
             List<KaartBase> nieuweKaartenLijst = new List<KaartBase>();
 
@@ -140,7 +140,7 @@ namespace Verbeterde_Machi_Koro
         /// </summary>
         /// <param name="_totaalAantalOgen"></param>
         /// <param name="_kaartKleur"></param>
-        public void ActiveerKaartenHulpMethode(int _totaalAantalOgen, string _kaartKleur)
+        private void ActiveerKaartenHulpMethode(int _totaalAantalOgen, string _kaartKleur)
         {
             List<Speler> transactieLijst =  BepaalTransactiesVolgorde(_kaartKleur);
 
@@ -162,7 +162,7 @@ namespace Verbeterde_Machi_Koro
         /// Bij rode en paarse kaarten moeten transacties tegen de klok in worden betaald. - Keano
         /// </summary>
         /// <returns></returns>
-        public List<Speler> BepaalTransactiesVolgorde(string _kaartKleur)
+        private List<Speler> BepaalTransactiesVolgorde(string _kaartKleur)
         {
             if (_kaartKleur == "Rood" || _kaartKleur == "Paars")
             {

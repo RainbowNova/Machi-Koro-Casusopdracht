@@ -10,14 +10,14 @@ namespace Verbeterde_Machi_Koro
     {
         public string Naam { get; private set; }
         public List<KaartBase> Hand { get; private set; }
-        public List<KaartGeel> Bezienswaardigheden { get; set; }
+        public List<KaartGeel> Bezienswaardigheden { get; private set; }
         public int TotaalGeld { get; private set; } = 3;
-        public List<int> GedobbeldeGetallen { get; set; }
+        public List<int> GedobbeldeGetallen { get; private set; }
         public bool IsComputer { get; private set; }
-        public bool HeeftGedobbeld { get; set; } = false;
-        public bool TweemaalDezelfdeOgenGedobbeld { get; set; } = false;
-        public bool HeeftHerdobbeld { get; set; } = false;
-        public MachiKoro MachiKoroPotje { get; set; }
+        public bool HeeftGedobbeld { get; private set; } = false;
+        public bool TweemaalDezelfdeOgenGedobbeld { get; private set; } = false;
+        public bool HeeftHerdobbeld { get; private set; } = false;
+        public MachiKoro MachiKoroPotje { get; private set; }
 
         public Speler(string _naam, bool _isComputer, MachiKoro _spel)
         {
